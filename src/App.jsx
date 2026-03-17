@@ -24,10 +24,12 @@ const App = () => {
         <Router>
             <div className="flex min-h-screen bg-slate-950">
                 <Sidebar userRole={userRole} onLogout={() => setIsAuthenticated(false)} />
-                <main className="flex-1 p-8 ml-72 overflow-auto">
+                <main className="flex-1 p-4 md:p-6 lg:p-8 pt-20 md:pt-6 lg:pt-8 pb-20 md:pb-6 lg:pb-8 ml-0 md:ml-24 lg:ml-72 w-full transition-all duration-300 overflow-x-hidden">
                     <Routes>
                         <Route path="/" element={<Dashboard userRole={userRole} />} />
                         <Route path="/clusters" element={<ClusterList userRole={userRole} />} />
+                        <Route path="/wards" element={<div>Wards Content</div>} />
+                        <Route path="/units" element={<div>Units Content</div>} />
                         <Route path="/agents" element={<AgentList userRole={userRole} />} />
                         <Route path="/voters" element={<VoterList userRole={userRole} />} />
                         <Route path="/survey" element={<VoterSurvey userRole={userRole} />} />

@@ -198,13 +198,13 @@ const VoterSurvey = () => {
     };
 
     return (
-        <div className="animate-in fade-in slide-in-from-bottom-5 duration-700 max-w-5xl mx-auto">
-            <header className="mb-10 text-center lg:text-left">
-                <h2 className="text-4xl font-extrabold tracking-tight mb-2 text-white">Household Voter Survey</h2>
-                <p className="text-lg text-slate-400 font-medium">Collect and verify detailed voter and household information.</p>
+        <div className="animate-in fade-in slide-in-from-bottom-5 duration-700 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 lg:py-10">
+            <header className="mb-6 sm:mb-8 lg:mb-10 text-center lg:text-left">
+                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight mb-2 text-white">Household Voter Survey</h2>
+                <p className="text-sm sm:text-base lg:text-lg text-slate-400 font-medium">Collect and verify detailed voter and household information.</p>
             </header>
 
-            <div className="glass rounded-[32px] p-8 lg:p-12 relative overflow-hidden">
+            <div className="glass rounded-2xl sm:rounded-3xl lg:rounded-[32px] p-5 sm:p-8 lg:p-12 relative overflow-hidden">
                 {submitted && (
                     <div className="absolute inset-0 bg-slate-950/80 backdrop-blur-md flex flex-col items-center justify-center z-10 animate-in fade-in duration-300">
                         <div className="p-4 bg-emerald-500/20 rounded-full mb-4 border border-emerald-500/30">
@@ -230,7 +230,7 @@ const VoterSurvey = () => {
                                     placeholder="Full Name"
                                     value={formData.voterName}
                                     onChange={(e) => setFormData({ ...formData, voterName: e.target.value })}
-                                    className="w-full bg-slate-950 border border-white/5 rounded-2xl py-3.5 px-6 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500/50 transition-all font-bold placeholder:text-slate-800 shadow-inner"
+                                    className="w-full bg-slate-950 border border-white/5 rounded-xl sm:rounded-2xl py-2.5 sm:py-3.5 px-4 sm:px-6 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500/50 transition-all font-bold placeholder:text-slate-800 shadow-inner"
                                 />
                             </div>
                             <div className="space-y-3">
@@ -243,7 +243,7 @@ const VoterSurvey = () => {
                                     placeholder="10-digit number"
                                     value={formData.mobileNumber}
                                     onChange={(e) => setFormData({ ...formData, mobileNumber: e.target.value })}
-                                    className="w-full bg-slate-950 border border-white/5 rounded-2xl py-3.5 px-6 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500/50 transition-all font-bold placeholder:text-slate-800 shadow-inner"
+                                    className="w-full bg-slate-950 border border-white/5 rounded-xl sm:rounded-2xl py-2.5 sm:py-3.5 px-4 sm:px-6 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500/50 transition-all font-bold placeholder:text-slate-800 shadow-inner"
                                 />
                             </div>
                             <div className="space-y-3">
@@ -255,7 +255,7 @@ const VoterSurvey = () => {
                                     type="date"
                                     value={formData.dob}
                                     onChange={(e) => setFormData({ ...formData, dob: e.target.value })}
-                                    className="w-full bg-slate-950 border border-white/5 rounded-2xl py-3.5 px-6 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500/50 transition-all font-bold shadow-inner [color-scheme:dark]"
+                                    className="w-full bg-slate-950 border border-white/5 rounded-xl sm:rounded-2xl py-2.5 sm:py-3.5 px-4 sm:px-6 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500/50 transition-all font-bold shadow-inner [color-scheme:dark]"
                                 />
                             </div>
                         </div>
@@ -265,13 +265,13 @@ const VoterSurvey = () => {
                                 <label className="flex items-center gap-2 text-xs font-black text-slate-500 uppercase tracking-widest ml-1">
                                     <Users size={14} className="text-indigo-400" /> Gender
                                 </label>
-                                <div className="grid grid-cols-3 gap-3">
+                                <div className="grid grid-cols-3 gap-2 sm:gap-3">
                                     {['Male', 'Female', 'Other'].map((g) => (
                                         <button
                                             key={g}
                                             type="button"
                                             onClick={() => setFormData({ ...formData, gender: g })}
-                                            className={`py-3 rounded-xl font-black transition-all border text-sm ${formData.gender === g
+                                            className={`py-2.5 sm:py-3 rounded-lg sm:rounded-xl font-black transition-all border text-xs sm:text-sm ${formData.gender === g
                                                 ? 'bg-indigo-600 text-white border-indigo-500 shadow-lg shadow-indigo-500/20'
                                                 : 'bg-slate-950 text-slate-500 border-white/5 hover:border-white/10'
                                                 }`}
@@ -291,7 +291,7 @@ const VoterSurvey = () => {
                                     placeholder="Head Name"
                                     value={formData.headOfHouse}
                                     onChange={(e) => setFormData({ ...formData, headOfHouse: e.target.value })}
-                                    className="w-full bg-slate-950 border border-white/5 rounded-2xl py-3.5 px-6 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500/50 transition-all font-bold placeholder:text-slate-800 shadow-inner"
+                                    className="w-full bg-slate-950 border border-white/5 rounded-xl sm:rounded-2xl py-2.5 sm:py-3.5 px-4 sm:px-6 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500/50 transition-all font-bold placeholder:text-slate-800 shadow-inner"
                                 />
                             </div>
                         </div>
@@ -312,20 +312,20 @@ const VoterSurvey = () => {
                                         placeholder="e.g. 12-4/A"
                                         value={formData.houseNumber}
                                         onChange={(e) => setFormData({ ...formData, houseNumber: e.target.value })}
-                                        className="w-full bg-slate-950 border border-white/5 rounded-2xl py-3.5 px-6 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500/50 transition-all font-bold placeholder:text-slate-800 shadow-inner"
+                                        className="w-full bg-slate-950 border border-white/5 rounded-xl sm:rounded-2xl py-2.5 sm:py-3.5 px-4 sm:px-6 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500/50 transition-all font-bold placeholder:text-slate-800 shadow-inner"
                                     />
                                 </div>
                                 <div className="space-y-3">
                                     <label className="flex items-center gap-2 text-xs font-black text-slate-500 uppercase tracking-widest ml-1">
                                         <Building2 size={14} className="text-indigo-400" /> House Type
                                     </label>
-                                    <div className="grid grid-cols-2 gap-4">
+                                    <div className="grid grid-cols-2 gap-3 sm:gap-4">
                                         {['Individual House', 'Flat'].map((type) => (
                                             <button
                                                 key={type}
                                                 type="button"
                                                 onClick={() => setFormData({ ...formData, houseType: type })}
-                                                className={`py-3.5 rounded-2xl font-black transition-all border text-sm ${formData.houseType === type
+                                                className={`py-2.5 sm:py-3.5 rounded-xl sm:rounded-2xl font-black transition-all border text-xs sm:text-sm ${formData.houseType === type
                                                     ? 'bg-indigo-600 text-white border-indigo-500 shadow-lg shadow-indigo-500/20'
                                                     : 'bg-slate-950 text-slate-500 border-white/5 hover:border-white/10'
                                                     }`}
@@ -349,20 +349,20 @@ const VoterSurvey = () => {
                                         min="1"
                                         value={formData.residentCount}
                                         onChange={(e) => setFormData({ ...formData, residentCount: e.target.value })}
-                                        className="w-full bg-slate-950 border border-white/5 rounded-2xl py-3.5 px-6 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500/50 transition-all font-bold placeholder:text-slate-800 shadow-inner"
+                                        className="w-full bg-slate-950 border border-white/5 rounded-xl sm:rounded-2xl py-2.5 sm:py-3.5 px-4 sm:px-6 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500/50 transition-all font-bold placeholder:text-slate-800 shadow-inner"
                                     />
                                 </div>
                                 <div className="space-y-3">
                                     <label className="flex items-center gap-2 text-xs font-black text-slate-500 uppercase tracking-widest ml-1">
                                         <Building2 size={14} className="text-indigo-400" /> Residence Ownership
                                     </label>
-                                    <div className="grid grid-cols-2 gap-4">
+                                    <div className="grid grid-cols-2 gap-3 sm:gap-4">
                                         {['Own', 'Rent'].map((type) => (
                                             <button
                                                 key={type}
                                                 type="button"
                                                 onClick={() => setFormData({ ...formData, residenceType: type })}
-                                                className={`py-3.5 rounded-2xl font-black transition-all border text-sm ${formData.residenceType === type
+                                                className={`py-2.5 sm:py-3.5 rounded-xl sm:rounded-2xl font-black transition-all border text-xs sm:text-sm ${formData.residenceType === type
                                                     ? 'bg-indigo-600 text-white border-indigo-500 shadow-lg shadow-indigo-500/20'
                                                     : 'bg-slate-950 text-slate-500 border-white/5 hover:border-white/10'
                                                     }`}
@@ -402,7 +402,7 @@ const VoterSurvey = () => {
                                         readOnly
                                         placeholder="Fetching latitude..."
                                         value={formData.latitude}
-                                        className="w-full bg-slate-900 border border-white/5 rounded-2xl py-3.5 px-6 text-slate-400 cursor-not-allowed font-bold placeholder:text-slate-600 shadow-inner"
+                                        className="w-full bg-slate-900 border border-white/5 rounded-xl sm:rounded-2xl py-2.5 sm:py-3.5 px-4 sm:px-6 text-slate-400 cursor-not-allowed font-bold placeholder:text-slate-600 shadow-inner"
                                     />
                                 </div>
                                 <div className="space-y-3">
@@ -415,7 +415,7 @@ const VoterSurvey = () => {
                                         readOnly
                                         placeholder="Fetching longitude..."
                                         value={formData.longitude}
-                                        className="w-full bg-slate-900 border border-white/5 rounded-2xl py-3.5 px-6 text-slate-400 cursor-not-allowed font-bold placeholder:text-slate-600 shadow-inner"
+                                        className="w-full bg-slate-900 border border-white/5 rounded-xl sm:rounded-2xl py-2.5 sm:py-3.5 px-4 sm:px-6 text-slate-400 cursor-not-allowed font-bold placeholder:text-slate-600 shadow-inner"
                                     />
                                 </div>
                             </div>
@@ -460,39 +460,39 @@ const VoterSurvey = () => {
                             placeholder="Any specific detailed observations..."
                             value={formData.remarks}
                             onChange={(e) => setFormData({ ...formData, remarks: e.target.value })}
-                            className="w-full bg-slate-950 border border-white/5 rounded-2xl py-4 px-6 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500/50 transition-all font-bold placeholder:text-slate-800 shadow-inner resize-none"
+                            className="w-full bg-slate-950 border border-white/5 rounded-xl sm:rounded-2xl py-3 sm:py-4 px-4 sm:px-6 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500/50 transition-all font-bold placeholder:text-slate-800 shadow-inner resize-none"
                         ></textarea>
                     </div>
 
                     {/* Submit Button */}
-                    <div className="pt-4">
+                    <div className="pt-2 sm:pt-4 lg:pt-6">
                         <button
                             type="submit"
-                            className="w-full py-5 bg-indigo-600 hover:bg-indigo-500 text-white rounded-[24px] font-black text-xl tracking-tight transition-all shadow-xl shadow-indigo-600/20 flex items-center justify-center gap-3 active:scale-[0.98]"
+                            className="w-full py-4 sm:py-5 bg-indigo-600 hover:bg-indigo-500 text-white rounded-2xl sm:rounded-[24px] font-black text-lg sm:text-xl tracking-tight transition-all shadow-xl shadow-indigo-600/20 flex items-center justify-center gap-2 sm:gap-3 active:scale-[0.98]"
                         >
-                            <Send size={24} /> Submit Survey Details
+                            <Send className="w-5 h-5 sm:w-6 sm:h-6" /> Submit Survey Details
                         </button>
                     </div>
                 </form>
             </div>
 
-            <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-4 opacity-50">
-                <div className="p-6 bg-white/5 rounded-3xl border border-white/5 flex items-center gap-4">
-                    <div className="p-3 bg-indigo-500/10 rounded-2xl text-indigo-400">
-                        <ClipboardList size={20} />
+            <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 opacity-50 px-0 sm:px-0">
+                <div className="p-4 sm:p-6 bg-white/5 rounded-2xl sm:rounded-3xl border border-white/5 flex items-center gap-3 sm:gap-4">
+                    <div className="p-2.5 sm:p-3 bg-indigo-500/10 rounded-xl sm:rounded-2xl text-indigo-400">
+                        <ClipboardList size={20} className="w-5 h-5 sm:w-auto sm:h-auto" />
                     </div>
                     <div>
-                        <p className="text-xs font-black text-slate-500 uppercase tracking-widest">Survey ID</p>
-                        <p className="text-white font-bold font-mono">SRV-{(Math.random() * 10000).toFixed(0)}</p>
+                        <p className="text-[10px] sm:text-xs font-black text-slate-500 uppercase tracking-widest">Survey ID</p>
+                        <p className="text-sm sm:text-base text-white font-bold font-mono">SRV-{(Math.random() * 10000).toFixed(0)}</p>
                     </div>
                 </div>
-                <div className="p-6 bg-white/5 rounded-3xl border border-white/5 flex items-center gap-4">
-                    <div className="p-3 bg-indigo-500/10 rounded-2xl text-indigo-400">
-                        <CheckCircle2 size={20} />
+                <div className="p-4 sm:p-6 bg-white/5 rounded-2xl sm:rounded-3xl border border-white/5 flex items-center gap-3 sm:gap-4">
+                    <div className="p-2.5 sm:p-3 bg-indigo-500/10 rounded-xl sm:rounded-2xl text-indigo-400">
+                        <CheckCircle2 size={20} className="w-5 h-5 sm:w-auto sm:h-auto" />
                     </div>
                     <div>
-                        <p className="text-xs font-black text-slate-500 uppercase tracking-widest">Status</p>
-                        <p className="text-white font-bold uppercase tracking-tighter">Draft Mode</p>
+                        <p className="text-[10px] sm:text-xs font-black text-slate-500 uppercase tracking-widest">Status</p>
+                        <p className="text-sm sm:text-base text-white font-bold uppercase tracking-tighter">Draft Mode</p>
                     </div>
                 </div>
             </div>
